@@ -1,0 +1,11 @@
+{
+  "name": "tripipal",
+  "description": "Application description goes here",
+  "version": "1.0.0-ALPHA1",
+  "private": true,
+  "dependencies": {
+    "express": "4.1.1",
+	"mongoose": "3.8.8",
+	"debug": "0.8.1"
+  }
+}
