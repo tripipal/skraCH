@@ -25,13 +25,13 @@ module.exports = function(app) {
     app.put('/api/:api/:id', router.put);
     app.delete('/api/:api/:id', router.delete);
     // load application
-    /*app.get('*', function(req, res) {
+    app.get('/', function(req, res) {
 		res.sendfile('./public/index.html'); // angular will handle this
-	});*/
+	});
     
     app.get('/auth/facebook',
         passport.authenticate('facebook', { scope: 'read_stream' })
     );
     app.get('/auth/facebook/callback', 
-        passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/login' }));
+        passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/public/login.html' }));
 }
